@@ -9,3 +9,4 @@ you need to edit the classes you want by hand. will fix.
 * click handling
 * config options
 * remove unnecessary views (window etc)
+* better positioning
