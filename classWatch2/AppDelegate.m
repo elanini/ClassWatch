@@ -22,7 +22,6 @@
 
 -(void)setClassString
 {
-    NSLog(@"setting string");
     NSMutableArray *classStrings = [[NSMutableArray alloc] init];
     //NSMutableAttributedString *fullString = [[NSMutableAttributedString alloc] init];
     BOOL initial = YES;
@@ -41,7 +40,6 @@
         initial = NO;
     }
     self.myView.classStrings = classStrings;
-    NSLog(@"%@", classStrings);
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
