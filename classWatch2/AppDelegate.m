@@ -22,24 +22,17 @@
 
 -(void)setClassString
 {
-    NSMutableArray *classStrings = [[NSMutableArray alloc] init];
-    //NSMutableAttributedString *fullString = [[NSMutableAttributedString alloc] init];
-    BOOL initial = YES;
+    NSLog(@"ran setClassString");
     for (CWClassObject *classObject in self.classArray) {
-        int newCount = [self updateClassDataForURL:classObject.classURL];
-        if (newCount < 0)
+        int count = [self updateClassDataForURL:classObject.classURL];
+        if (count < 0)
             break;
-        [classStrings addObject:[[NSAttributedString alloc]
-                                            initWithString:[NSString stringWithFormat:@"%8s : %3ld", classObject.name.UTF8String, (long)newCount]
-                                            attributes:@{
-                                                         NSForegroundColorAttributeName : [CWClassObject colorForAvailable:newCount oldAvailable:classObject.oldAvailableSeats],
-                                                         NSFontAttributeName : [NSFont fontWithName:@"Courier" size:8]
-                                                         }
-                                            ]];
-        classObject.oldAvailableSeats = newCount;
-        initial = NO;
+        
+        [self.myView
+         updateClassString:[NSString stringWithFormat:@"%8s : %3ld", classObject.name.UTF8String, (long)count]
+                    filled:count == 0 ? YES : NO];
     }
-    self.myView.classStrings = classStrings;
+    [self.myView setNeedsDisplay:YES];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -51,7 +44,6 @@
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     _myView = [[CustomStatusView alloc] init];
     _myView.statusItem = _statusItem;
-    _myView.title = @"fuckboysrus";
     [self setClassString];
     [_statusItem setView:_myView];
     

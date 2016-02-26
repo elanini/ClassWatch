@@ -31,7 +31,6 @@
     if (self) {
         self.classURL = URL;
         self.availableSeats = amount;
-        self.oldAvailableSeats = 0;
         self.name = name;
     }
     return self;

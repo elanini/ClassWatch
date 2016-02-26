@@ -10,6 +10,7 @@
 #import "CustomStatusView.h"
 
 @interface CustomStatusView ()
+@property (nonatomic) NSMutableArray *classStrings;
 
 @end
 
@@ -21,29 +22,46 @@
     self = [super initWithFrame:frameRect];
     
     if(self) {
-        self.title = @"";
+        self.classStrings = [[NSMutableArray alloc] init];
     }
     NSLog(@"ran initWithFrame:%@", CGRectCreateDictionaryRepresentation(frameRect));
     return self;
 }
 
--(void)setClassStrings:(NSArray *)classStrings
+-(void)updateClassString:(NSString *)classString filled:(BOOL)isFull
 {
-    [self.statusItem setLength:[CustomStatusView widthForClassAmount:classStrings.count]];
-    _classStrings = classStrings;
-    [self setNeedsDisplay:YES];
+    NSLog(@"ran updateClassString");
+    NSString *classSubString = [classString substringToIndex: 8];
+    NSUInteger index = [self.classStrings indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([((NSAttributedString*)obj).string containsString:classSubString]) {
+            *stop = YES;
+            return YES;
+        }
+        return NO;
+    }];
+    
+    if (index == NSNotFound) {
+        [self.classStrings addObject:[CustomStatusView attributedStringForString:classString filled:isFull]];
+    } else {
+        [self.classStrings replaceObjectAtIndex:index withObject:[CustomStatusView attributedStringForString:classString filled:isFull]];
+    }
 }
 
-+(NSAttributedString*)stringForClass:(NSString*)className seats:(NSInteger)seats
++(NSAttributedString*)attributedStringForString:(NSString *)classString filled:(BOOL)isFull
 {
-    return [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%9s : %03ld", className.UTF8String, (long)seats ]
-                                           attributes:@{NSForegroundColorAttributeName : seats == 0 ? [NSColor redColor] : [NSColor greenColor],
-                                                                   NSFontAttributeName : [NSFont fontWithName:@"Courier" size:8]}];
+    return [[NSAttributedString alloc] initWithString:classString attributes:@{NSForegroundColorAttributeName : (isFull ? [NSColor redColor] : [NSColor greenColor]),
+                                                                               NSFontAttributeName : [NSFont fontWithName:@"Courier" size:8]}];
+}
+
+-(void)setNeedsDisplay:(BOOL)needsDisplay
+{
+    [self.statusItem setLength:[CustomStatusView widthForClassAmount:self.classStrings.count]];
+    [super setNeedsDisplay:needsDisplay];
 }
 
 +(NSInteger)widthForClassAmount:(NSInteger)amt
 {
-    int textwidth = (int)ceil([[self stringForClass:@"CMPS101" seats:15] size].width);
+    int textwidth = (int)ceil([self attributedStringForString:@"AAAAAAAA : 000" filled:YES].size.width);
     return ceil(amt/2.0f)*textwidth;
 }
 
@@ -59,20 +77,4 @@
     
     
 }
-
-+(NSColor *)colorForAvailable:(int)availableSeats oldAvailable:(int)oldAvailableSeats
-{
-    NSColor *color;
-    if (oldAvailableSeats < availableSeats) {
-        color = [NSColor redColor];
-    } else if (availableSeats > oldAvailableSeats) {
-        color = [NSColor greenColor];
-    } else {
-        color = [NSColor whiteColor];
-    }
-    
-    return color;
-}
-
-
 @end

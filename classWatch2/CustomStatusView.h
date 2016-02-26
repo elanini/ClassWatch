@@ -11,11 +11,7 @@
 
 @interface CustomStatusView : NSView
 @property NSStatusItem *statusItem;
-@property (nonatomic) NSString *title;
-@property (nonatomic) NSArray *classStrings;
 
 
-+(NSInteger)widthForClassAmount:(NSInteger)amt;
-+(NSColor*)colorForAvailable:(int)availableSeats oldAvailable:(int)oldAvailableSeats;
-
+-(void)updateClassString:(NSString *)classString filled:(BOOL)isFull;
 @end
