@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076382C01C7E58AC002E996A /* CustomStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0745736A1C7D9A0E0023FF76 /* CustomStatusView.m */; };
+		077A9CDF1C7FD28600ACD2DC /* CWClassObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A9CDE1C7FD28600ACD2DC /* CWClassObject.m */; };
 		07F4DFB41C7D2CE40048E1F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFB31C7D2CE40048E1F4 /* AppDelegate.m */; };
 		07F4DFB71C7D2CE40048E1F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFB61C7D2CE40048E1F4 /* main.m */; };
 		07F4DFBA1C7D2CE40048E1F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFB91C7D2CE40048E1F4 /* ViewController.m */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0745736A1C7D9A0E0023FF76 /* CustomStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomStatusView.m; sourceTree = "<group>"; };
+		0745736C1C7D9A1D0023FF76 /* CustomStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomStatusView.h; sourceTree = "<group>"; };
+		077A9CDE1C7FD28600ACD2DC /* CWClassObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWClassObject.m; sourceTree = "<group>"; };
+		077A9CE01C7FD29600ACD2DC /* CWClassObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWClassObject.h; sourceTree = "<group>"; };
 		07F4DFAF1C7D2CE40048E1F4 /* classWatch2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = classWatch2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F4DFB21C7D2CE40048E1F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07F4DFB31C7D2CE40048E1F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,12 +107,16 @@
 			children = (
 				07F4DFB21C7D2CE40048E1F4 /* AppDelegate.h */,
 				07F4DFB31C7D2CE40048E1F4 /* AppDelegate.m */,
+				0745736C1C7D9A1D0023FF76 /* CustomStatusView.h */,
+				0745736A1C7D9A0E0023FF76 /* CustomStatusView.m */,
 				07F4DFB81C7D2CE40048E1F4 /* ViewController.h */,
 				07F4DFB91C7D2CE40048E1F4 /* ViewController.m */,
 				07F4DFBB1C7D2CE40048E1F4 /* Assets.xcassets */,
 				07F4DFBD1C7D2CE40048E1F4 /* Main.storyboard */,
 				07F4DFC01C7D2CE40048E1F4 /* Info.plist */,
 				07F4DFB51C7D2CE40048E1F4 /* Supporting Files */,
+				077A9CDE1C7FD28600ACD2DC /* CWClassObject.m */,
+				077A9CE01C7FD29600ACD2DC /* CWClassObject.h */,
 			);
 			path = classWatch2;
 			sourceTree = "<group>";
@@ -266,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076382C01C7E58AC002E996A /* CustomStatusView.m in Sources */,
+				077A9CDF1C7FD28600ACD2DC /* CWClassObject.m in Sources */,
 				07F4DFBA1C7D2CE40048E1F4 /* ViewController.m in Sources */,
 				07F4DFB71C7D2CE40048E1F4 /* main.m in Sources */,
 				07F4DFB41C7D2CE40048E1F4 /* AppDelegate.m in Sources */,
@@ -489,6 +501,7 @@
 				07F4DFDB1C7D2CE40048E1F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07F4DFDC1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "classWatch2Tests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +510,7 @@
 				07F4DFDE1C7D2CE40048E1F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07F4DFDF1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "classWatch2UITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +519,7 @@
 				07F4DFE11C7D2CE40048E1F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
