@@ -6,12 +6,16 @@
 //  Copyright © 2016 Eric Lanini. All rights reserved.
 //
 
+#import "CWClassObject.h"
 @import AppKit;
 
 @interface CustomStatusView : NSView
 @property NSStatusItem *statusItem;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSArray *classStrings;
 
--(void)renderClassesWithTitlesAndEnrolled:(NSArray *)classData;
--(NSInteger)widthForClassAmount:(NSInteger)amt;
+
++(NSInteger)widthForClassAmount:(NSInteger)amt;
++(NSColor*)colorForAvailable:(int)availableSeats oldAvailable:(int)oldAvailableSeats;
 
 @end

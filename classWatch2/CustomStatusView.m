@@ -9,54 +9,73 @@
 #import <Foundation/Foundation.h>
 #import "CustomStatusView.h"
 
-
-
 @interface CustomStatusView ()
-@property NSArray *classData;
+
 @end
 
 @implementation CustomStatusView
+@synthesize classStrings = _classStrings;
 
 -(id)initWithFrame:(NSRect)frameRect
 {
     self = [super initWithFrame:frameRect];
     
     if(self) {
-        self.classData = @[@{
-                                @"class": @"class one",
-                                @"openings": @100
-                                }];
+        self.title = @"";
     }
-    
+    NSLog(@"ran initWithFrame:%@", CGRectCreateDictionaryRepresentation(frameRect));
     return self;
 }
 
--(void)renderClassesWithTitlesAndEnrolled:(NSArray *)classData
+-(void)setClassStrings:(NSArray *)classStrings
 {
-    self.classData = classData;
+    [self.statusItem setLength:[CustomStatusView widthForClassAmount:classStrings.count]];
+    _classStrings = classStrings;
     [self setNeedsDisplay:YES];
 }
 
--(NSAttributedString*)stringForClass:(NSString*)className seats:(NSInteger)seats
++(NSAttributedString*)stringForClass:(NSString*)className seats:(NSInteger)seats
 {
-    return [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%8s : %3ld", className.UTF8String, (long)seats ]
+    return [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%9s : %03ld", className.UTF8String, (long)seats ]
                                            attributes:@{NSForegroundColorAttributeName : seats == 0 ? [NSColor redColor] : [NSColor greenColor],
-                                                                   NSFontAttributeName : [NSFont fontWithName:@"Helvetica" size:6]}];
+                                                                   NSFontAttributeName : [NSFont fontWithName:@"Courier" size:8]}];
 }
 
--(NSInteger)widthForClassAmount:(NSInteger)amt
++(NSInteger)widthForClassAmount:(NSInteger)amt
 {
-    int textwidth = (int)[[self stringForClass:@"CMPS101" seats:1] size].width;
-    NSLog(@"%ld %f %d", (long)amt, ceil((float)amt/2.0f), textwidth);
+    int textwidth = (int)ceil([[self stringForClass:@"CMPS101" seats:15] size].width);
+    //NSLog(@"%ld %f %d", (long)amt, ceil((float)amt/2.0f), textwidth);
     return ceil(amt/2.0f)*textwidth;
 }
 
 -(void)drawRect:(NSRect)dirtyRect
 {
-    [self.statusItem drawStatusBarBackgroundInRect:[self bounds] withHighlight:NO];
+    //NSLog(@"ran drawRect:%@", CGRectCreateDictionaryRepresentation(dirtyRect));
+    int i=1;
+    for (NSAttributedString *classString in self.classStrings) {
+        int widthModifier = classString.size.width*(ceil(i/2.0)-1);
+        int heightModifier = classString.size.height*((i-1)%2);
+        [classString drawAtPoint:NSMakePoint(dirtyRect.origin.x+widthModifier, dirtyRect.origin.y+heightModifier-1)];
+        i++;
+        //NSLog(@"drawrectinfo: widthmod: %d, heightmod: %d\nclassstring.size.width: %f classstring.size.height: %f", widthModifier, heightModifier, classString.size.width, classString.size.height);
+    }
     
-    NSRect viewRect = NSInsetRect(self.bounds, 20.0f, 20.0f);
-    [@"fuck" drawInRect:viewRect withAttributes:nil];
+    
 }
+
++(NSColor *)colorForAvailable:(int)availableSeats oldAvailable:(int)oldAvailableSeats
+{
+    NSColor *color;
+    if (oldAvailableSeats < availableSeats) {
+        color = [NSColor redColor];
+    } else if (availableSeats > oldAvailableSeats) {
+        color = [NSColor greenColor];
+    } else {
+        color = [NSColor whiteColor];
+    }
+    
+    return color;
+}
+
 
 @end

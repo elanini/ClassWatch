@@ -13,25 +13,26 @@
 
 -(instancetype)init
 {
-    return [self initWithURL:nil availableSeats:0];
+    return [self initWithURL:nil name:nil availableSeats:0];
 }
--(instancetype)initWithURL:(NSURL*)URL
+-(instancetype)initWithURL:(NSURL*)URL name:(NSString*)name
 {
-    return [self initWithURL:URL availableSeats:0];
+    return [self initWithURL:URL name:name availableSeats:0];
 }
 
--(instancetype)initWithString:(NSString*)urlString
+-(instancetype)initWithString:(NSString*)urlString name:(NSString*)name
 {
-    return [self initWithURL:[NSURL URLWithString:urlString] availableSeats:0];
+    return [self initWithURL:[NSURL URLWithString:urlString] name: name availableSeats:0];
 }
 
--(instancetype)initWithURL:(NSURL *)URL availableSeats:(int)amount
+-(instancetype)initWithURL:(NSURL *)URL name:(NSString*)name availableSeats:(int)amount
 {
     self = [super init];
     if (self) {
         self.classURL = URL;
         self.availableSeats = amount;
         self.oldAvailableSeats = 0;
+        self.name = name;
     }
     return self;
 }
