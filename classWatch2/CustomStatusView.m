@@ -44,20 +44,17 @@
 +(NSInteger)widthForClassAmount:(NSInteger)amt
 {
     int textwidth = (int)ceil([[self stringForClass:@"CMPS101" seats:15] size].width);
-    //NSLog(@"%ld %f %d", (long)amt, ceil((float)amt/2.0f), textwidth);
     return ceil(amt/2.0f)*textwidth;
 }
 
 -(void)drawRect:(NSRect)dirtyRect
 {
-    //NSLog(@"ran drawRect:%@", CGRectCreateDictionaryRepresentation(dirtyRect));
     int i=1;
     for (NSAttributedString *classString in self.classStrings) {
         int widthModifier = classString.size.width*(ceil(i/2.0)-1);
         int heightModifier = classString.size.height*((i-1)%2);
         [classString drawAtPoint:NSMakePoint(dirtyRect.origin.x+widthModifier, dirtyRect.origin.y+heightModifier-1)];
         i++;
-        //NSLog(@"drawrectinfo: widthmod: %d, heightmod: %d\nclassstring.size.width: %f classstring.size.height: %f", widthModifier, heightModifier, classString.size.width, classString.size.height);
     }
     
     
