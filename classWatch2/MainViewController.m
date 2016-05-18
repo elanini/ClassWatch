@@ -34,18 +34,18 @@
 
 -(void)initializeStatusItem
 {
-    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    _myView = [[CustomStatusView alloc] init];
-    _myView.statusItem = _statusItem;
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    self.myView = [[CustomStatusView alloc] init];
+    self.myView.statusItem = self.statusItem;
     NSMenu *menu = [[NSMenu alloc] init];
     
     [[menu addItemWithTitle:@"Preferences" action:@selector(showPrefWindow:) keyEquivalent:@""] setTarget:self];
     [menu addItem:[NSMenuItem separatorItem]];
     [menu addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
-    [_myView setMenu:menu];
+    [self.myView setMenu:menu];
     [self setClassString];
-    [_statusItem setView:_myView];
-    [_statusItem setHighlightMode:YES];
+    [self.statusItem setView:_myView];
+    [self.statusItem setHighlightMode:YES];
     
     
     

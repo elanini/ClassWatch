@@ -16,8 +16,6 @@
 		07F4DFBA1C7D2CE40048E1F4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFB91C7D2CE40048E1F4 /* MainViewController.m */; };
 		07F4DFBC1C7D2CE40048E1F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F4DFBB1C7D2CE40048E1F4 /* Assets.xcassets */; };
 		07F4DFBF1C7D2CE40048E1F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F4DFBD1C7D2CE40048E1F4 /* Main.storyboard */; };
-		07F4DFCA1C7D2CE40048E1F4 /* classWatch2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFC91C7D2CE40048E1F4 /* classWatch2Tests.m */; };
-		07F4DFD51C7D2CE40048E1F4 /* classWatch2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFD41C7D2CE40048E1F4 /* classWatch2UITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +53,7 @@
 		07F4DFBE1C7D2CE40048E1F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07F4DFC01C7D2CE40048E1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F4DFC51C7D2CE40048E1F4 /* classWatch2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = classWatch2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07F4DFC91C7D2CE40048E1F4 /* classWatch2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = classWatch2Tests.m; sourceTree = "<group>"; };
-		07F4DFCB1C7D2CE40048E1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F4DFD01C7D2CE40048E1F4 /* classWatch2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = classWatch2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07F4DFD41C7D2CE40048E1F4 /* classWatch2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = classWatch2UITests.m; sourceTree = "<group>"; };
-		07F4DFD61C7D2CE40048E1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +84,7 @@
 		07F4DFA61C7D2CE40048E1F4 = {
 			isa = PBXGroup;
 			children = (
-				07F4DFB11C7D2CE40048E1F4 /* classWatch2 */,
-				07F4DFC81C7D2CE40048E1F4 /* classWatch2Tests */,
-				07F4DFD31C7D2CE40048E1F4 /* classWatch2UITests */,
+				07F4DFB11C7D2CE40048E1F4 /* ClassWatch */,
 				07F4DFB01C7D2CE40048E1F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,7 +99,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07F4DFB11C7D2CE40048E1F4 /* classWatch2 */ = {
+		07F4DFB11C7D2CE40048E1F4 /* ClassWatch */ = {
 			isa = PBXGroup;
 			children = (
 				07F4DFB21C7D2CE40048E1F4 /* AppDelegate.h */,
@@ -126,6 +118,7 @@
 				073173D01CE4288B00FFBDCA /* PrefWindowController.h */,
 				073173D11CE4288B00FFBDCA /* PrefWindowController.m */,
 			);
+			name = ClassWatch;
 			path = classWatch2;
 			sourceTree = "<group>";
 		};
@@ -137,30 +130,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07F4DFC81C7D2CE40048E1F4 /* classWatch2Tests */ = {
-			isa = PBXGroup;
-			children = (
-				07F4DFC91C7D2CE40048E1F4 /* classWatch2Tests.m */,
-				07F4DFCB1C7D2CE40048E1F4 /* Info.plist */,
-			);
-			path = classWatch2Tests;
-			sourceTree = "<group>";
-		};
-		07F4DFD31C7D2CE40048E1F4 /* classWatch2UITests */ = {
-			isa = PBXGroup;
-			children = (
-				07F4DFD41C7D2CE40048E1F4 /* classWatch2UITests.m */,
-				07F4DFD61C7D2CE40048E1F4 /* Info.plist */,
-			);
-			path = classWatch2UITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07F4DFAE1C7D2CE40048E1F4 /* classWatch2 */ = {
+		07F4DFAE1C7D2CE40048E1F4 /* ClassWatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07F4DFD91C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "classWatch2" */;
+			buildConfigurationList = 07F4DFD91C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "ClassWatch" */;
 			buildPhases = (
 				07F4DFAB1C7D2CE40048E1F4 /* Sources */,
 				07F4DFAC1C7D2CE40048E1F4 /* Frameworks */,
@@ -170,14 +145,14 @@
 			);
 			dependencies = (
 			);
-			name = classWatch2;
+			name = ClassWatch;
 			productName = classWatch2;
 			productReference = 07F4DFAF1C7D2CE40048E1F4 /* classWatch2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07F4DFC41C7D2CE40048E1F4 /* classWatch2Tests */ = {
+		07F4DFC41C7D2CE40048E1F4 /* ClassWatchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07F4DFDC1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "classWatch2Tests" */;
+			buildConfigurationList = 07F4DFDC1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "ClassWatchTests" */;
 			buildPhases = (
 				07F4DFC11C7D2CE40048E1F4 /* Sources */,
 				07F4DFC21C7D2CE40048E1F4 /* Frameworks */,
@@ -188,14 +163,14 @@
 			dependencies = (
 				07F4DFC71C7D2CE40048E1F4 /* PBXTargetDependency */,
 			);
-			name = classWatch2Tests;
+			name = ClassWatchTests;
 			productName = classWatch2Tests;
 			productReference = 07F4DFC51C7D2CE40048E1F4 /* classWatch2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		07F4DFCF1C7D2CE40048E1F4 /* classWatch2UITests */ = {
+		07F4DFCF1C7D2CE40048E1F4 /* ClassWatchUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07F4DFDF1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "classWatch2UITests" */;
+			buildConfigurationList = 07F4DFDF1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "ClassWatchUITests" */;
 			buildPhases = (
 				07F4DFCC1C7D2CE40048E1F4 /* Sources */,
 				07F4DFCD1C7D2CE40048E1F4 /* Frameworks */,
@@ -206,7 +181,7 @@
 			dependencies = (
 				07F4DFD21C7D2CE40048E1F4 /* PBXTargetDependency */,
 			);
-			name = classWatch2UITests;
+			name = ClassWatchUITests;
 			productName = classWatch2UITests;
 			productReference = 07F4DFD01C7D2CE40048E1F4 /* classWatch2UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -233,7 +208,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 07F4DFAA1C7D2CE40048E1F4 /* Build configuration list for PBXProject "classWatch2" */;
+			buildConfigurationList = 07F4DFAA1C7D2CE40048E1F4 /* Build configuration list for PBXProject "ClassWatch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -246,9 +221,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07F4DFAE1C7D2CE40048E1F4 /* classWatch2 */,
-				07F4DFC41C7D2CE40048E1F4 /* classWatch2Tests */,
-				07F4DFCF1C7D2CE40048E1F4 /* classWatch2UITests */,
+				07F4DFAE1C7D2CE40048E1F4 /* ClassWatch */,
+				07F4DFC41C7D2CE40048E1F4 /* ClassWatchTests */,
+				07F4DFCF1C7D2CE40048E1F4 /* ClassWatchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F4DFCA1C7D2CE40048E1F4 /* classWatch2Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F4DFD51C7D2CE40048E1F4 /* classWatch2UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,12 +288,12 @@
 /* Begin PBXTargetDependency section */
 		07F4DFC71C7D2CE40048E1F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07F4DFAE1C7D2CE40048E1F4 /* classWatch2 */;
+			target = 07F4DFAE1C7D2CE40048E1F4 /* ClassWatch */;
 			targetProxy = 07F4DFC61C7D2CE40048E1F4 /* PBXContainerItemProxy */;
 		};
 		07F4DFD21C7D2CE40048E1F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07F4DFAE1C7D2CE40048E1F4 /* classWatch2 */;
+			target = 07F4DFAE1C7D2CE40048E1F4 /* ClassWatch */;
 			targetProxy = 07F4DFD11C7D2CE40048E1F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -419,11 +392,12 @@
 		07F4DFDA1C7D2CE40048E1F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = classWatch2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.elanini.classWatch2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elanini.classWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -431,11 +405,12 @@
 		07F4DFDB1C7D2CE40048E1F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = classWatch2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.elanini.classWatch2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elanini.classWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -448,8 +423,8 @@
 				INFOPLIST_FILE = classWatch2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elanini.classWatch2Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/classWatch2.app/Contents/MacOS/classWatch2";
+				PRODUCT_NAME = ClassWatchTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassWatch.app/Contents/MacOS/ClassWatch";
 			};
 			name = Debug;
 		};
@@ -461,8 +436,8 @@
 				INFOPLIST_FILE = classWatch2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elanini.classWatch2Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/classWatch2.app/Contents/MacOS/classWatch2";
+				PRODUCT_NAME = ClassWatchTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassWatch.app/Contents/MacOS/ClassWatch";
 			};
 			name = Release;
 		};
@@ -473,7 +448,7 @@
 				INFOPLIST_FILE = classWatch2UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elanini.classWatch2UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ClassWatchTests;
 				TEST_TARGET_NAME = classWatch2;
 				USES_XCTRUNNER = YES;
 			};
@@ -486,7 +461,7 @@
 				INFOPLIST_FILE = classWatch2UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elanini.classWatch2UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ClassWatchTests;
 				TEST_TARGET_NAME = classWatch2;
 				USES_XCTRUNNER = YES;
 			};
@@ -495,7 +470,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07F4DFAA1C7D2CE40048E1F4 /* Build configuration list for PBXProject "classWatch2" */ = {
+		07F4DFAA1C7D2CE40048E1F4 /* Build configuration list for PBXProject "ClassWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07F4DFD71C7D2CE40048E1F4 /* Debug */,
@@ -504,7 +479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07F4DFD91C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "classWatch2" */ = {
+		07F4DFD91C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "ClassWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07F4DFDA1C7D2CE40048E1F4 /* Debug */,
@@ -513,7 +488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07F4DFDC1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "classWatch2Tests" */ = {
+		07F4DFDC1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "ClassWatchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07F4DFDD1C7D2CE40048E1F4 /* Debug */,
@@ -522,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07F4DFDF1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "classWatch2UITests" */ = {
+		07F4DFDF1C7D2CE40048E1F4 /* Build configuration list for PBXNativeTarget "ClassWatchUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07F4DFE01C7D2CE40048E1F4 /* Debug */,

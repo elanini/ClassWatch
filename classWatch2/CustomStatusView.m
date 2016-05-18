@@ -16,7 +16,7 @@
 @end
 
 @implementation CustomStatusView
-@synthesize classStrings = _classStrings;
+
 
 -(id)initWithFrame:(NSRect)frameRect
 {

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07F4DFAE1C7D2CE40048E1F4"
-               BuildableName = "classWatch2.app"
-               BlueprintName = "classWatch2"
-               ReferencedContainer = "container:classWatch2.xcodeproj">
+               BuildableName = "ClassWatch.app"
+               BlueprintName = "ClassWatch"
+               ReferencedContainer = "container:ClassWatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07F4DFC41C7D2CE40048E1F4"
-               BuildableName = "classWatch2Tests.xctest"
-               BlueprintName = "classWatch2Tests"
-               ReferencedContainer = "container:classWatch2.xcodeproj">
+               BuildableName = "ClassWatchTests.xctest"
+               BlueprintName = "ClassWatchTests"
+               ReferencedContainer = "container:ClassWatch.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07F4DFCF1C7D2CE40048E1F4"
-               BuildableName = "classWatch2UITests.xctest"
-               BlueprintName = "classWatch2UITests"
-               ReferencedContainer = "container:classWatch2.xcodeproj">
+               BuildableName = "ClassWatchTests.xctest"
+               BlueprintName = "ClassWatchUITests"
+               ReferencedContainer = "container:ClassWatch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,18 +53,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07F4DFAE1C7D2CE40048E1F4"
-            BuildableName = "classWatch2.app"
-            BlueprintName = "classWatch2"
-            ReferencedContainer = "container:classWatch2.xcodeproj">
+            BuildableName = "ClassWatch.app"
+            BlueprintName = "ClassWatch"
+            ReferencedContainer = "container:ClassWatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      buildConfiguration = "Release"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07F4DFAE1C7D2CE40048E1F4"
-            BuildableName = "classWatch2.app"
-            BlueprintName = "classWatch2"
-            ReferencedContainer = "container:classWatch2.xcodeproj">
+            BuildableName = "ClassWatch.app"
+            BlueprintName = "ClassWatch"
+            ReferencedContainer = "container:ClassWatch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07F4DFAE1C7D2CE40048E1F4"
-            BuildableName = "classWatch2.app"
-            BlueprintName = "classWatch2"
-            ReferencedContainer = "container:classWatch2.xcodeproj">
+            BuildableName = "ClassWatch.app"
+            BlueprintName = "ClassWatch"
+            ReferencedContainer = "container:ClassWatch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -106,6 +106,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "ClassWatch"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
