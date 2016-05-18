@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073173D21CE4288B00FFBDCA /* PrefWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 073173D11CE4288B00FFBDCA /* PrefWindowController.m */; };
+		07467D181C80484000C6B10B /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07467D171C80484000C6B10B /* MenuView.xib */; };
 		076382C01C7E58AC002E996A /* CustomStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0745736A1C7D9A0E0023FF76 /* CustomStatusView.m */; };
 		077A9CDF1C7FD28600ACD2DC /* CWClassObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A9CDE1C7FD28600ACD2DC /* CWClassObject.m */; };
 		07F4DFB41C7D2CE40048E1F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFB31C7D2CE40048E1F4 /* AppDelegate.m */; };
 		07F4DFB71C7D2CE40048E1F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFB61C7D2CE40048E1F4 /* main.m */; };
-		07F4DFBA1C7D2CE40048E1F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFB91C7D2CE40048E1F4 /* ViewController.m */; };
+		07F4DFBA1C7D2CE40048E1F4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFB91C7D2CE40048E1F4 /* MainViewController.m */; };
 		07F4DFBC1C7D2CE40048E1F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F4DFBB1C7D2CE40048E1F4 /* Assets.xcassets */; };
 		07F4DFBF1C7D2CE40048E1F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F4DFBD1C7D2CE40048E1F4 /* Main.storyboard */; };
 		07F4DFCA1C7D2CE40048E1F4 /* classWatch2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DFC91C7D2CE40048E1F4 /* classWatch2Tests.m */; };
@@ -36,16 +38,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		073173D01CE4288B00FFBDCA /* PrefWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefWindowController.h; sourceTree = "<group>"; };
+		073173D11CE4288B00FFBDCA /* PrefWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefWindowController.m; sourceTree = "<group>"; };
 		0745736A1C7D9A0E0023FF76 /* CustomStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomStatusView.m; sourceTree = "<group>"; };
 		0745736C1C7D9A1D0023FF76 /* CustomStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomStatusView.h; sourceTree = "<group>"; };
+		07467D171C80484000C6B10B /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		077A9CDE1C7FD28600ACD2DC /* CWClassObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWClassObject.m; sourceTree = "<group>"; };
 		077A9CE01C7FD29600ACD2DC /* CWClassObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWClassObject.h; sourceTree = "<group>"; };
 		07F4DFAF1C7D2CE40048E1F4 /* classWatch2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = classWatch2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F4DFB21C7D2CE40048E1F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07F4DFB31C7D2CE40048E1F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		07F4DFB61C7D2CE40048E1F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07F4DFB81C7D2CE40048E1F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		07F4DFB91C7D2CE40048E1F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07F4DFB81C7D2CE40048E1F4 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		07F4DFB91C7D2CE40048E1F4 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		07F4DFBB1C7D2CE40048E1F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07F4DFBE1C7D2CE40048E1F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07F4DFC01C7D2CE40048E1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,14 +114,17 @@
 				07F4DFB31C7D2CE40048E1F4 /* AppDelegate.m */,
 				0745736C1C7D9A1D0023FF76 /* CustomStatusView.h */,
 				0745736A1C7D9A0E0023FF76 /* CustomStatusView.m */,
-				07F4DFB81C7D2CE40048E1F4 /* ViewController.h */,
-				07F4DFB91C7D2CE40048E1F4 /* ViewController.m */,
+				07F4DFB81C7D2CE40048E1F4 /* MainViewController.h */,
+				07F4DFB91C7D2CE40048E1F4 /* MainViewController.m */,
 				07F4DFBB1C7D2CE40048E1F4 /* Assets.xcassets */,
 				07F4DFBD1C7D2CE40048E1F4 /* Main.storyboard */,
 				07F4DFC01C7D2CE40048E1F4 /* Info.plist */,
 				07F4DFB51C7D2CE40048E1F4 /* Supporting Files */,
 				077A9CDE1C7FD28600ACD2DC /* CWClassObject.m */,
 				077A9CE01C7FD29600ACD2DC /* CWClassObject.h */,
+				07467D171C80484000C6B10B /* MenuView.xib */,
+				073173D01CE4288B00FFBDCA /* PrefWindowController.h */,
+				073173D11CE4288B00FFBDCA /* PrefWindowController.m */,
 			);
 			path = classWatch2;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F4DFBC1C7D2CE40048E1F4 /* Assets.xcassets in Resources */,
+				07467D181C80484000C6B10B /* MenuView.xib in Resources */,
 				07F4DFBF1C7D2CE40048E1F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,8 +287,9 @@
 			files = (
 				076382C01C7E58AC002E996A /* CustomStatusView.m in Sources */,
 				077A9CDF1C7FD28600ACD2DC /* CWClassObject.m in Sources */,
-				07F4DFBA1C7D2CE40048E1F4 /* ViewController.m in Sources */,
+				07F4DFBA1C7D2CE40048E1F4 /* MainViewController.m in Sources */,
 				07F4DFB71C7D2CE40048E1F4 /* main.m in Sources */,
+				073173D21CE4288B00FFBDCA /* PrefWindowController.m in Sources */,
 				07F4DFB41C7D2CE40048E1F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

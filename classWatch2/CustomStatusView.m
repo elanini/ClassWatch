@@ -11,6 +11,7 @@
 
 @interface CustomStatusView ()
 @property (nonatomic) NSMutableArray *classStrings;
+@property (nonatomic) BOOL isMenuVisible;
 
 @end
 
@@ -23,15 +24,14 @@
     
     if(self) {
         self.classStrings = [[NSMutableArray alloc] init];
+        self.isMenuVisible = NO;
     }
-    NSLog(@"ran initWithFrame:%@", CGRectCreateDictionaryRepresentation(frameRect));
     return self;
 }
 
 -(void)updateClassString:(NSString *)classString filled:(BOOL)isFull
 {
-    NSLog(@"ran updateClassString");
-    NSString *classSubString = [classString substringToIndex: 8];
+    NSString *classSubString = [classString substringToIndex: 10];
     NSUInteger index = [self.classStrings indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([((NSAttributedString*)obj).string containsString:classSubString]) {
             *stop = YES;
@@ -47,10 +47,12 @@
     }
 }
 
+#pragma drawing
+
 +(NSAttributedString*)attributedStringForString:(NSString *)classString filled:(BOOL)isFull
 {
     return [[NSAttributedString alloc] initWithString:classString attributes:@{NSForegroundColorAttributeName : (isFull ? [NSColor redColor] : [NSColor greenColor]),
-                                                                               NSFontAttributeName : [NSFont fontWithName:@"Courier" size:8]}];
+                                                                               NSFontAttributeName : [NSFont fontWithName:@"Courier" size:9]}];
 }
 
 -(void)setNeedsDisplay:(BOOL)needsDisplay
@@ -61,7 +63,7 @@
 
 +(NSInteger)widthForClassAmount:(NSInteger)amt
 {
-    int textwidth = (int)ceil([self attributedStringForString:@"AAAAAAAA : 000" filled:YES].size.width);
+    int textwidth = (int)ceil([self attributedStringForString:@" AAAAAAAA : 000" filled:YES].size.width);
     return ceil(amt/2.0f)*textwidth;
 }
 
@@ -77,4 +79,34 @@
     
     
 }
+
+
+#pragma menu handling
+
+- (void)mouseDown:(NSEvent *)event {
+    [[self menu] setDelegate:self];
+    [self.statusItem popUpStatusItemMenu:[self menu]];
+    [self setNeedsDisplay:YES];
+}
+
+- (void)rightMouseDown:(NSEvent *)event {
+    // Treat right-click just like left-click
+    [self mouseDown:event];
+}
+
+- (void)menuWillOpen:(NSMenu *)menu {
+    self.isMenuVisible = YES;
+    [self setNeedsDisplay:YES];
+}
+
+- (void)menuDidClose:(NSMenu *)menu {
+    self.isMenuVisible = NO;
+    [menu setDelegate:nil];
+    [self setNeedsDisplay:YES];
+}
+
+
+
+
+
 @end

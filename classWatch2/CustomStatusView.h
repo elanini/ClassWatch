@@ -9,7 +9,7 @@
 #import "CWClassObject.h"
 @import AppKit;
 
-@interface CustomStatusView : NSView
+@interface CustomStatusView : NSView <NSMenuDelegate>
 @property NSStatusItem *statusItem;
 
 

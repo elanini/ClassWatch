@@ -16,9 +16,14 @@
 @property int availableSeats;
 @property NSString *name;
 
+-(instancetype)initWithString:(NSString *)urlString;
 -(instancetype)initWithURL:(NSURL*)URL name:(NSString*)name;
 -(instancetype)initWithURL:(NSURL *)URL name:(NSString*)name availableSeats:(int)amount;
 -(instancetype)initWithString:(NSString *)urlString name:(NSString*)name;
++(NSString*)nameFromURL:(NSURL*)classURL;
++(NSArray<CWClassObject*>*)objectsFromPList:(NSArray<NSDictionary*>*)plist;
++(NSArray<NSDictionary*>*)plistFromObjects:(NSArray<CWClassObject*>*)objects;
+
 
 
 @end
