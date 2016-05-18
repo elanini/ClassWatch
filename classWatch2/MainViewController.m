@@ -79,6 +79,7 @@
 
 -(void)setClassString
 {
+        
     for (CWClassObject *classObject in self.classList) {
         NSLog(@"name = %@", classObject.name);
         int count = [self updateClassDataForURL:classObject.classURL];

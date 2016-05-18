@@ -55,9 +55,19 @@
                                                                                NSFontAttributeName : [NSFont fontWithName:@"Courier" size:9]}];
 }
 
+-(NSAttributedString*)defaultString
+{
+    return [[NSAttributedString alloc] initWithString:@"CW" attributes:@{NSForegroundColorAttributeName : [NSColor whiteColor],
+                                                                                 NSFontAttributeName : [NSFont fontWithName:@"Courier" size:16]}];
+}
+
 -(void)setNeedsDisplay:(BOOL)needsDisplay
 {
-    [self.statusItem setLength:[CustomStatusView widthForClassAmount:self.classStrings.count]];
+    if (self.classStrings.count == 0) {
+        [self.statusItem setLength:[self defaultString].size.width];
+    } else {
+        [self.statusItem setLength:[CustomStatusView widthForClassAmount:self.classStrings.count]];
+    }
     [super setNeedsDisplay:needsDisplay];
 }
 
@@ -69,16 +79,20 @@
 
 -(void)drawRect:(NSRect)dirtyRect
 {
-    int i=1;
-    for (NSAttributedString *classString in self.classStrings) {
-        int widthModifier = classString.size.width*(ceil(i/2.0)-1);
-        int heightModifier = classString.size.height*((i-1)%2);
-        [classString drawAtPoint:NSMakePoint(dirtyRect.origin.x+widthModifier, dirtyRect.origin.y+heightModifier-1)];
-        i++;
+    if (self.classStrings.count == 0) {
+        [[self defaultString] drawAtPoint:NSMakePoint(dirtyRect.origin.x, dirtyRect.origin.y)];
+    } else {
+        int i=1;
+        for (NSAttributedString *classString in self.classStrings) {
+            int widthModifier = classString.size.width*(ceil(i/2.0)-1);
+            int heightModifier = classString.size.height*((i-1)%2);
+            [classString drawAtPoint:NSMakePoint(dirtyRect.origin.x+widthModifier, dirtyRect.origin.y+heightModifier-1)];
+            i++;
+        }
     }
     
-    
 }
+
 
 
 #pragma menu handling
