@@ -10,4 +10,5 @@ you can get it prebuilt in Releases
 ### todo:
 * better positioning
 * better programming in general
+* better class naming
 * a lot of stuff
